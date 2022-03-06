@@ -1,0 +1,17 @@
+[package]
+name = "gamecontrollerr"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+objr = {git = "https://github.com/drewcrawford/objr"}
+
+[dev-dependencies]
+foundationr = {git = "https://github.com/drewcrawford/foundationr",features=["nsrunloop"]}
+
+[[test]]
+name = "gckeyboard"
+path = "test/gckeyboard.rs"
+harness = false
