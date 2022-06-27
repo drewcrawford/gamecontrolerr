@@ -1,4 +1,5 @@
 use objr::bindings::*;
+use super::GCKeyboardInput;
 objr::objc_class! {
     pub struct GCKeyboard {
         @class(GCKeyboard)
@@ -6,7 +7,8 @@ objr::objc_class! {
 }
 objr::objc_selector_group! {
     trait Selectors {
-            @selector("coalescedKeyboard")
+        @selector("coalescedKeyboard")
+        @selector("keyboardInput")
     }
     impl Selectors for Sel {}
 }
@@ -24,8 +26,13 @@ impl GCKeyboard {
     pub fn coalescedKeyboard(pool: &ActiveAutoreleasePool) -> Option<StrongMutCell<GCKeyboard>> {
         unsafe {
             let raw = Class::<Self>::perform_autorelease_to_retain(Self::class().assume_nonmut_perform(), Sel::coalescedKeyboard(), pool, ());
-            println!("raw is {:?}",raw);
             GCKeyboard::nullable(raw).assume_retained().assume_mut()
+        }
+    }
+    pub fn keyboardInput(&self, pool: &ActiveAutoreleasePool) -> Option<StrongMutCell<GCKeyboardInput>> {
+        unsafe {
+            let raw = Self::perform_autorelease_to_retain(self.assume_nonmut_perform(), Sel::keyboardInput(), pool, ());
+            GCKeyboardInput::nullable(raw).assume_retained().assume_mut()
         }
     }
 }
