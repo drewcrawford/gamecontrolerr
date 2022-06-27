@@ -4,7 +4,8 @@ use foundationr::{NSRunLoop,NSDate,ObjcClass};
 fn main() {
     autoreleasepool(|pool| {
         let mut keyboard = None;
-        for _ in 0..1000 {
+        //maybe this takes longer on github's ci?
+        for _ in 0..100_000 {
             keyboard = GCKeyboard::coalescedKeyboard(pool);
             if keyboard.is_some() { break }
             let date = NSDate::class().alloc_init(pool);
