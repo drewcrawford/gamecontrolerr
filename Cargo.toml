@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 objr = {git = "https://github.com/drewcrawford/objr"}
+foundationr = {git = "https://github.com/drewcrawford/foundationr",features=["nsarray"]}
 
 [dev-dependencies]
 foundationr = {git = "https://github.com/drewcrawford/foundationr",features=["nsrunloop"]}
@@ -14,4 +15,9 @@ foundationr = {git = "https://github.com/drewcrawford/foundationr",features=["ns
 [[test]]
 name = "gckeyboard"
 path = "test/gckeyboard.rs"
+harness = false
+
+[[test]]
+name = "gcmouse"
+path = "test/gcmouse.rs"
 harness = false

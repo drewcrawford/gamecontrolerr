@@ -1,9 +1,11 @@
 use objr::bindings::*;
+use crate::GCControllerElement;
 objc_class! {
     pub struct GCControllerButtonInput {
         @class(GCControllerButtonInput)
     }
 }
+
 
 objc_selector_group! {
     trait Selectors {

@@ -1,3 +1,5 @@
+![logo](art/logo.png)
+
 # Drew's GameController.framework bindings for Rust
 
 This library binds (some subset of) Apple GameController.framework to Rust.  As far as I know,
@@ -23,3 +25,5 @@ The following APIs are at least partially supported:
 * `GCKeyboard`, `GCKeyboardInput`
 * `GCControllerButtonInput` - primarily `isPressed`
 * `GCKeyCode` - all input codes.
+* `GCMouse`, `GCMouseInput`
+* `GCControllerElement` (limited)
