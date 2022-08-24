@@ -25,5 +25,9 @@ fn main() {
             println!("button name: {:?}",button.as_element().unmappedLocalizedName(pool));
             println!("collection: {:?}",button.as_element().collection(pool))
         }
+
+        for mouse in GCMouse::mice(pool).iter(pool) {
+            println!("mouse: {}",mouse);
+        }
     });
 }
