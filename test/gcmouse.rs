@@ -29,5 +29,8 @@ fn main() {
         for mouse in GCMouse::mice(pool).iter(pool) {
             println!("mouse: {}",mouse);
         }
+        input.leftButton(pool).setPressedChangedHandler((), pool, |a,b,c,d| {
+            println!("left button pressed: {}",c);
+        });
     });
 }

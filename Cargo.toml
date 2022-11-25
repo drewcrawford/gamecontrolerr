@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 objr = {git = "https://github.com/drewcrawford/objr"}
 foundationr = {git = "https://github.com/drewcrawford/foundationr",features=["nsarray"]}
+blocksr = {git = "https://github.com/drewcrawford/blocksr"}
 
 [dev-dependencies]
 foundationr = {git = "https://github.com/drewcrawford/foundationr",features=["nsrunloop"]}
