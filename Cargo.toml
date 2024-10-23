@@ -6,9 +6,9 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-objr = {git = "https://github.com/drewcrawford/objr"}
+objr = "1"
 foundationr = {git = "https://github.com/drewcrawford/foundationr",features=["nsarray"]}
-blocksr = {git = "https://github.com/drewcrawford/blocksr"}
+blocksr = "1"
 
 [dev-dependencies]
 foundationr = {git = "https://github.com/drewcrawford/foundationr",features=["nsrunloop"]}
